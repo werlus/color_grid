@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+
+<style>
+
+    body{
+        background-color: black;
+        margin: 0;
+    }
+    
+    .default {
+        background: grey;
+        transition: all 0.2s ease-in;
+        display: inline-block;
+        min-height: 5em;
+        min-width: 5em;
+    }
+
+    .default:hover {
+        color: #fdec6e;
+        box-shadow:0px 0px 5px white;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0% 5%;
+    }
+
+</style>
+
+<script>
+    function hover_change(id)
+    {
+        var identification = id;
+        function random_bg_color() {
+        var x = Math.floor(Math.random() * 256);
+        var y = Math.floor(Math.random() * 256);
+        var z = Math.floor(Math.random() * 256);
+        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+        console.log(bgColor);
+  
+        document.getElementById(identification).style.background = bgColor;
+        }
+
+        random_bg_color();
+    }
+
+
+
+</script>
+
+<body>
+
+    <div class="row">
+        <div onmouseover="hover_change(id)" class="default" id="1"></div>
+        <div onmouseover="hover_change(id)" class="default" id="2"></div>
+        <div onmouseover="hover_change(id)" class="default" id="3"></div>
+        <div onmouseover="hover_change(id)" class="default" id="4"></div>
+        <div onmouseover="hover_change(id)" class="default" id="5"></div>
+        <div onmouseover="hover_change(id)" class="default" id="6"></div>
+        <div onmouseover="hover_change(id)" class="default" id="7"></div>
+        <div onmouseover="hover_change(id)" class="default" id="8"></div>
+        <div onmouseover="hover_change(id)" class="default" id="9"></div>
+    </div>
+    <div class="row">
+        <div onmouseover="hover_change(id)" class="default" id="10"></div>
+        <div onmouseover="hover_change(id)" class="default" id="11"></div>
+        <div onmouseover="hover_change(id)" class="default" id="12"></div>
+        <div onmouseover="hover_change(id)" class="default" id="13"></div>
+        <div onmouseover="hover_change(id)" class="default" id="14"></div>
+        <div onmouseover="hover_change(id)" class="default" id="15"></div>
+        <div onmouseover="hover_change(id)" class="default" id="16"></div>
+        <div onmouseover="hover_change(id)" class="default" id="17"></div>
+        <div onmouseover="hover_change(id)" class="default" id="18"></div>
+    </div>
+    <div class="row">
+        <div onmouseover="hover_change(id)" class="default" id="19"></div>
+        <div onmouseover="hover_change(id)" class="default" id="20"></div>
+        <div onmouseover="hover_change(id)" class="default" id="21"></div>
+        <div onmouseover="hover_change(id)" class="default" id="22"></div>
+        <div onmouseover="hover_change(id)" class="default" id="23"></div>
+        <div onmouseover="hover_change(id)" class="default" id="24"></div>
+        <div onmouseover="hover_change(id)" class="default" id="25"></div>
+        <div onmouseover="hover_change(id)" class="default" id="26"></div>
+        <div onmouseover="hover_change(id)" class="default" id="27"></div>
+    </div>
+</body>
+</html>
+
+<!-- Color Grid
+    Looka like a grid
+    Grid has default colors - Grey, without border
+    On hover
+        changes color from default to random color (with a nice shadow glow)
+    Off hover
+        stops glowing?
+    On pass back over
+-->
