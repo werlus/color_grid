@@ -1,4 +1,53 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px 0;
+}
+
 body {
-    background: black;
+    background-color: black;
     color: white;
+    margin: 0;
+}
+
+button {
+    display: inline-block;
+    margin: 5px;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #e98747;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+button:active {
+    background-color: #b53a06;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#counter {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#life-total {
+    font-size: 96px;
+    margin: 40px;
 }
