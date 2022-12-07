@@ -80,9 +80,9 @@ button:active {
 }
 
 #life-total {
-    font-size: 96px;
+    font-size: 4rem;
     margin: 40px;
-    width: 120px;
+    width: 140px;
     text-align: center;
     background-color: rgb(102, 102, 102, .75);
     border-radius: 25%;
