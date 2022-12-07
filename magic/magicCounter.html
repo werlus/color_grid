@@ -12,20 +12,24 @@
     </header>
     <div id="counter">
         <div class="btn-stack">
-            <button class="add green" onclick="changeLifeTotal(1)">+1</button>
-            <button class="add green" onclick="changeLifeTotal(2)">+2</button>
-            <button class="add green" onclick="changeLifeTotal(5)">+5</button>
-            <button class="add green" onclick="changeLifeTotal(10)">+10</button>
+            <button class="add" onclick="changeLifeTotal(1)">+1</button>
+            <button class="add" onclick="changeLifeTotal(2)">+2</button>
+            <button class="add" onclick="changeLifeTotal(5)">+5</button>
+            <button class="add" onclick="changeLifeTotal(10)">+10</button>
         </div>
 
         <div class="storage" id="life-total">0</div>
 
         <div class="btn-stack">
-            <button class="subtract red" onclick="changeLifeTotal(-1)">-1</button>
-            <button class="subtract red" onclick="changeLifeTotal(-2)">-2</button>
-            <button class="subtract red" onclick="changeLifeTotal(-5)">-5</button>
-            <button class="subtract red" onclick="changeLifeTotal(-10)">-10</button>
+            <button class="subtract" onclick="changeLifeTotal(-1)">-1</button>
+            <button class="subtract" onclick="changeLifeTotal(-2)">-2</button>
+            <button class="subtract" onclick="changeLifeTotal(-5)">-5</button>
+            <button class="subtract" onclick="changeLifeTotal(-10)">-10</button>
         </div>
+    </div>
+    <div class="btn-panel">
+        <button class="add-start" onclick="resetLifeTotal(20)">Start Standard</button>
+        <button class="add-start" onclick="resetLifeTotal(40)">Start Commander</button>
     </div>
 
     <script src="magicScript.js"></script>

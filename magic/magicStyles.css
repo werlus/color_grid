@@ -21,8 +21,8 @@ h2 {
 }
 
 body {
-    background-color: black;
-    color: white;
+    background-color: rgb(21,11,0);
+    color: rgb(249,250,244);
     margin: 0;
     font-family: Arial, Helvetica, sans-serif
 }
@@ -38,7 +38,7 @@ button {
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #fff;
+    color: rbg(249, 250, 244);
     border: none;
     border-radius: 15px;
     box-shadow: 2px 4px #999;
@@ -51,11 +51,15 @@ button:active {
 }
 
 .add {
-    background-color:rgb(57, 129, 180);
+    background-color:rgb(14, 104, 171);
+}
+
+.add-start {
+    background-color: rgb(0, 115, 62);
 }
 
 .subtract {
-    background-color:rgb(180, 57, 57);
+    background-color:rgb(211, 32, 42);
 }
 
 #counter {
@@ -77,6 +81,12 @@ button:active {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.btn-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 #life-total {
