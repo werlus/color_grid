@@ -1,21 +1,17 @@
-let lifeTotal = 0
+
+// Life Button Values
 const addValues = [1, 2, 5, 10]
 const subtractValues = [-1, -2, -5, -10]
-let lifeBox = document.getElementById("life-total")
 
-function changeLifeTotal(value) {
-    let lifeChange = value
-    lifeTotal = lifeTotal + lifeChange
-    lifeBox.innerText = lifeTotal
-}
+// Page Elements
+let lifeBoxEl = document.getElementById("life-total")
+let addLifeButtonsEl = document.getElementById("add-life")
+let subtractLifeButtonsEl = document.getElementById("subtract-life")
 
-function resetLifeTotal(value) {
-    let lifeChange = value
-    lifeTotal = lifeChange
-    lifeBox.innerText = lifeTotal
-}
+// Changing Variables
+let lifeTotal = 0
 
-console.log("hi")
+// Functions
 function addButtons(valueArray){
     let buttonEl = ""
     let modifier = ""
@@ -31,8 +27,23 @@ function addButtons(valueArray){
         <button class="${method}" onclick="changeLifeTotal(${valueArray[i]})">${modifier}${valueArray[i]}</button>
         `
     }
-    console.log(buttonEl)
+    return buttonEl
 }
 
-addButtons(addValues)
-addButtons(subtractValues)
+addLifeButtonsEl.innerHTML = addButtons(addValues)
+subtractLifeButtonsEl.innerHTML = addButtons(subtractValues)
+
+function changeLifeTotal(value) {
+    let lifeChange = value
+    lifeTotal = lifeTotal + lifeChange
+    lifeBoxEl.innerText = lifeTotal
+}
+
+function resetLifeTotal(value) {
+    let lifeChange = value
+    lifeTotal = lifeChange
+    lifeBoxEl.innerText = lifeTotal
+}
+
+
+
