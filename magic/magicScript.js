@@ -8,8 +8,16 @@ let lifeBoxEl = document.getElementById("life-total")
 let addLifeButtonsEl = document.getElementById("add-life")
 let subtractLifeButtonsEl = document.getElementById("subtract-life")
 
-// Changing Variables
+// Local Storage
+const retrievedLifeTotal = localStorage.getItem("savedLifeTotalValue")
+const savedLifeTotal = JSON.parse(retrievedLifeTotal)
+
+// Life Total 0 or Pull LT from Storage
 let lifeTotal = 0
+if(savedLifeTotal){
+    lifeTotal = savedLifeTotal
+} 
+lifeBoxEl.innerText = lifeTotal
 
 // Functions
 function addButtons(valueArray){
@@ -36,12 +44,18 @@ subtractLifeButtonsEl.innerHTML = addButtons(subtractValues)
 function changeLifeTotal(value) {
     let lifeChange = value
     lifeTotal = lifeTotal + lifeChange
+    let lifeTotalSave = JSON.stringify(lifeTotal)
+    localStorage.clear()
+    localStorage.setItem("savedLifeTotalValue", lifeTotalSave)
     lifeBoxEl.innerText = lifeTotal
 }
 
 function resetLifeTotal(value) {
     let lifeChange = value
     lifeTotal = lifeChange
+    let lifeTotalSave = JSON.stringify(lifeTotal)
+    localStorage.clear()
+    localStorage.setItem("savedLifeTotalValue", lifeTotalSave)
     lifeBoxEl.innerText = lifeTotal
 }
 
