@@ -1,3 +1,8 @@
+@font-face {
+    font-family: gothamNarrow;
+    src: url(../magic/fonts/GothamXNarrow-Bold.otf);
+  }
+
 header {
     display: flex;
     flex-direction: column;
@@ -18,13 +23,15 @@ header {
 h2 {
     color:#b53a06;
     margin: 0;
+    font-family: gothamNarrow;
+    font-size: 32px;
 }
 
 body {
     background-color: rgb(21,11,0);
     color: rgb(249,250,244);
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
@@ -63,6 +70,7 @@ button:active {
 
 #counter {
     min-height: 300px;
+    width: 462px;
     background-image: url("../magic/assets/smoky.gif");
     background-position:center;
     background-repeat: no-repeat;
@@ -81,6 +89,15 @@ button:active {
     flex-direction: column;
     justify-content: center;
     color: white;
+    margin: 0;
+}
+
+.reset-btn {
+    display: flex;
+    width: 452px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-panel {
@@ -91,7 +108,7 @@ button:active {
 
 #life-total {
     font-size: 4rem;
-    margin: 40px;
+    margin: 20px;
     width: 140px;
     text-align: center;
     background-color: rgb(102, 102, 102, .75);
