@@ -28,7 +28,9 @@ p {
 }
 
 .nav-btns{
-    float: right;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2px;
 }
 
 .container {
